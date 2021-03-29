@@ -1,1 +1,45 @@
-<h1>Hello!<h1>
+<!DOCTYPE html>
+<html>
+<body>
+<h1>CLIP Retrieval Testing</h1>
+<h2>Image to Text Retrieval</h2>
+
+<p style="font-size:30px;">
+    Here, we investigate how well the CLIP can tell the <b>relation property</b> between objects.
+</p>
+<p style="color:red;font-size:30px;">
+    <b>Note that on synthentic data, it doesn't perform well, so we test whether it works on natural images.</b>
+</p>
+
+<p style="color:red;font-size:30px;">
+    Note: Red bar means the corresponding ground truth.
+</p>
+
+<img src="./images/image-to-text.png"
+     alt="a pillow on a blue sofa" width="2304" height="2304">
+
+<h2>Text to Text Retrieval</h2>
+<p style="font-size:30px;">Here, we compare every pair of text features to investigate how good the CLIP embedding is.
+    For example, <b>"a red cube on the left of blue cube"</b> should match <b>"a blue cube on the right of a red cube".</b>
+</p>
+<p style="font-size:30px;">
+    Since the semantic meaning should remain the same when we flip the relation and object descriptions.
+</p>
+
+<img src="./images/text-to-text.png"
+     alt="text-to-text retrieval" width="2304" height="2304">
+</body>
+
+<h2> Image to Text Retrieval with object description</h2>
+<p style="font-size:30px;">Here, we investigate how good the CLIP embedding is in terms of matching described objects.
+    We don't use any relation here but just simply object description.
+</p>
+
+<p style="font-size:30px;">simple object compounds description seem easy for CLIP <b>without specifying relation</b>.</p>
+
+<img src="./images/zero-shot-image-description.png"
+     alt="zero-shot-image-description-matching" width="2304" height="2304">
+
+
+</html>
+</html>
